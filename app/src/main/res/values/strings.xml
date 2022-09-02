@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Board games Boji</string>
+    <string name="name_game">Nombre: </string>
+    <string name="precio">Precio: </string>
+    <string name="players">Players: </string>
+    <string name="publisher">by </string>
+</resources>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/divider_color"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="293dp"
+            android:background="@color/accent_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline2"/>
+
+        <ImageView
+            android:id="@+id/detalleImagen"
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/divider_color"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/detalleNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/primary_text"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/detalleImagen"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="titulo" />
+
+        <TextView
+            android:id="@+id/detallePublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/detalleImagen"
+            app:layout_constraintTop_toBottomOf="@+id/detalleNombre"
+            tools:text="Publisher" />
+
+        <TextView
+            android:id="@+id/detallePrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/primary_text"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/detalleImagen"
+            app:layout_constraintTop_toBottomOf="@+id/detalleYear"
+            tools:text="Precio" />
+
+        <TextView
+            android:id="@+id/detallePlayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/detalleImagen"
+            app:layout_constraintTop_toBottomOf="@+id/detallePrecio"
+            tools:text="Players"
+            android:textColor="@color/primary_text"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnComprar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button"
+            android:drawableLeft="@drawable/ic_comprar"
+            android:text="Comprar"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detalleImagen"
+            app:layout_constraintVertical_bias="0.793" />
+
+        <TextView
+            android:id="@+id/detalleYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintStart_toEndOf="@+id/detalleImagen"
+            app:layout_constraintTop_toBottomOf="@+id/detallePublisher"
+            tools:text="Year" />
+
+        <TextView
+            android:id="@+id/txtDetalleDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="5dp"
+            android:paddingHorizontal="5dp"
+            android:textColor="@color/primary_text"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            tools:text="descripcion" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/txtDetalleDescripcion"
+            android:stretchColumns="0,1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Nombre"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Nombre" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Editor"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetallePublisher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Editor" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Año"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Año" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Diseñador"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleDesigner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Diseñador" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Artista"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleArtista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Artista" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Tiempo de juego"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+
+                <TextView
+                    android:id="@+id/txtDetalleTiempoJuego"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Tiempo de juego" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Edad"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Edad" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@color/divider_color"
+                    android:text="Link Oficial"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/txtDetalleOficialLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp"
+                    android:textStyle="normal|bold"
+                    tools:text="prueba Link Oficial" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
