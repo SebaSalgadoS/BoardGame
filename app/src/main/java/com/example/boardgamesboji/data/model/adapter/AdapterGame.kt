@@ -4,13 +4,16 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.boardgamesboji.ui.view.DetalleGame
 import com.example.boardgamesboji.R
 import com.example.boardgamesboji.data.model.retrofit.Game
 import com.squareup.picasso.Picasso
+import kotlin.coroutines.coroutineContext
 
 const val GAMEID_MESSAGE = "com.example.boardgamesboji.GAMEID"
 
@@ -31,6 +34,7 @@ class AdapterGame(private val datos: List<Game>): RecyclerView.Adapter<AdapterGa
             txtPublisher = view.findViewById(R.id.txtPublisher)
             txtPlayer = view.findViewById(R.id.txtPlayer)
             txtPrecio = view.findViewById(R.id.txtPrecio)
+
         }
 
     }
@@ -44,7 +48,7 @@ class AdapterGame(private val datos: List<Game>): RecyclerView.Adapter<AdapterGa
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val game = datos.get(position)
-
+        holder.itemView.setAnimation(AnimationUtils.loadAnimation(holder.itemView.context, R.anim.fade_transition));
         holder.txtGameName.text = game.nombre
         holder.txtPublisher.text = "By ${game.editor}"
         holder.txtPrecio.text = "Precio: ${game.precio.toString()}"

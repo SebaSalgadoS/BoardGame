@@ -4,24 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:backgroundTint="@color/light_primary_color"
+    android:backgroundTint="@color/white"
     android:animateLayoutChanges="true"
     app:cardCornerRadius="20dp"
-    app:cardElevation="5dp"
-    app:cardUseCompatPadding="true">
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/cardView">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="16dp">
+        android:paddingBottom="5dp">
 
         <ImageView
             android:id="@+id/imagenGame"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:padding="5dp"
-            android:background="@color/divider_color"
+            android:background="@drawable/stylo_background_imagen"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             tools:srcCompat="@tools:sample/avatars"/>
@@ -30,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginStart="5dp">
+            android:layout_marginStart="10dp">
 
             <TextView
                 android:id="@+id/txtGameName"
@@ -47,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/secondary_text"
+                android:textColor="@color/primary_text"
                 android:textStyle="italic"
                 android:textSize="11sp"
                 tools:text="Publisher"/>
@@ -56,19 +57,20 @@
                 android:id="@+id/txtPlayer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/secondary_text"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/primary_text"
                 android:textSize="12sp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 tools:text="Players"/>
 
             <TextView
                 android:id="@+id/txtPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/secondary_text"
-                android:textSize="13sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="100dp"
+                android:textColor="@color/primary_text"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 tools:text="Precio"/>
 

@@ -29,7 +29,7 @@ class DetalleGame : AppCompatActivity() {
         detalleGameViewModel.game.observe(this, Observer { game->
             with(binding){
                 detalleNombre.text = game.nombre
-                detallePrecio.text = "Precio: ${game.precio.toString()}"
+                detallePrecio.text = "Precio: $ ${game.precio.toString()}"
                 detallePublisher.text = "by ${game.editor}"
                 txtDetalleArtista.text = game.artista
                 txtDetalleDesigner.text = game.designer
@@ -37,7 +37,7 @@ class DetalleGame : AppCompatActivity() {
                 txtDetalleTiempoJuego.text  = game.tiempoJuego
                 txtDetalleYear.text = game.year.toString()
                 txtDetalleOficialLink.text = game.oficialLink
-                detallePlayers.text = game.player
+                detallePlayers.text = "Players: ${game.player}"
                 detalleYear.text = game.year.toString()
                 txtDetallePublisher.text = game.editor
                 txtDetalleNombre.text = game.nombre

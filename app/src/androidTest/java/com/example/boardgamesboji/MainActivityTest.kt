@@ -32,9 +32,6 @@ class MainActivityTest {
         } catch (e: InterruptedException) {
             e.printStackTrace()
         }
-
-        // tuve problemas para reconocer el recycler dentro del test pero mi idea era hacer q buscara la tercera tarjeta dentro del recycler y abriera
-        //hace click sobre el 3do elemento del recycker
         onView(withId(R.id.recyclerViewGame))
             .perform(
                 RecyclerViewActions.actionOnItemAtPosition<AdapterGame.ViewHolder>(

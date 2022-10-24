@@ -15,10 +15,15 @@
     <color name="primary_color">#4CAF50</color>
     <color name="text_icons">#FFFFFF</color>
     <color name="accent_color">#F8D834</color>
-    <color name="primary_text">#212121</color>
+    <color name="primary_text">#2C3E50</color>
     <color name="secondary_text">#757575</color>
     <color name="divider_color">#BDBDBD</color>
-    <color name="button">#A83EF0</color>
+    <color name="button">#F30474</color>
+    <color name="amarillo">#FFFB00</color>
+    <color name="azul_oscuro">#2620AB</color>
+    <color name="azul_intermedio">#2874A6</color>
+    <color name="morado_tenue">#E8DAEF</color>
+    <color name="gris_tenue">#D0D3D4</color>
 
 
 </resources>
